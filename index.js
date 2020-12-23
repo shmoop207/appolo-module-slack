@@ -1,13 +1,11 @@
 "use strict";
 var SlackModule_1;
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SlackModule = exports.ISlackSendOptions = exports.SlackProvider = void 0;
+exports.SlackModule = exports.SlackProvider = void 0;
 const tslib_1 = require("tslib");
 const engine_1 = require("@appolo/engine");
 const slackProvider_1 = require("./src/slackProvider");
 Object.defineProperty(exports, "SlackProvider", { enumerable: true, get: function () { return slackProvider_1.SlackProvider; } });
-const ISlackProvider_1 = require("./src/ISlackProvider");
-Object.defineProperty(exports, "ISlackSendOptions", { enumerable: true, get: function () { return ISlackProvider_1.ISlackSendOptions; } });
 let SlackModule = SlackModule_1 = class SlackModule extends engine_1.Module {
     constructor() {
         super(...arguments);

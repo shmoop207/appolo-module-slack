@@ -2,11 +2,10 @@
 import {Module, module,IModuleParams} from '@appolo/engine';
 import {IOptions} from "./src/IOptions";
 import {SlackProvider} from "./src/slackProvider";
-import {ISlackSendOptions} from "./src/ISlackProvider";
 
 export {IOptions}  from "./src/IOptions"
 
-export {SlackProvider, ISlackSendOptions}
+export {SlackProvider}
 
 @module()
 export class SlackModule extends Module<IOptions> {
