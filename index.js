@@ -20,8 +20,8 @@ let SlackModule = SlackModule_1 = class SlackModule extends engine_1.Module {
         return [{ id: this.moduleOptions.id, type: slackProvider_1.SlackProvider }];
     }
 };
-SlackModule = SlackModule_1 = tslib_1.__decorate([
-    engine_1.module()
+SlackModule = SlackModule_1 = (0, tslib_1.__decorate)([
+    (0, engine_1.module)()
 ], SlackModule);
 exports.SlackModule = SlackModule;
 //# sourceMappingURL=index.js.map

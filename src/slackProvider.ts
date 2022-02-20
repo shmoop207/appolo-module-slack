@@ -6,7 +6,7 @@ import {IncomingWebhook, IncomingWebhookSendArguments} from '@slack/webhook'
 
 @define()
 @singleton()
-export class SlackProvider  {
+export class SlackProvider {
 
     private _slackWebHook: IncomingWebhook;
     @inject() logger: ILogger;
@@ -15,8 +15,9 @@ export class SlackProvider  {
 
     @init()
     public initialize() {
-
-        this._slackWebHook = new IncomingWebhook(this.moduleOptions.webHook);
+        if (this.moduleOptions.webHook) {
+            this._slackWebHook = new IncomingWebhook(this.moduleOptions.webHook);
+        }
     }
 
     public async sendWebHook(opts: IncomingWebhookSendArguments & { hook?: string }): Promise<void> {
